@@ -1,5 +1,7 @@
 1)   print whether a number is even or odd
 
+
+
 import java.util.Scanner;
 
 public class EvenOrOdd {
@@ -19,7 +21,12 @@ public class EvenOrOdd {
     }
 }
 
+
+
+
 2)  Take name as input and print a greeting message for that particular name.
+
+
 
 import java.util.Scanner;
 
@@ -35,3 +42,132 @@ public class Greeting {
         scanner.close();
     }
 }
+
+
+
+3)   input principal, time, and rate (P, T, R) from the user and find Simple Interest.
+
+
+import java.util.Scanner;
+
+public class SimpleInterestCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input principal amount
+        System.out.print("Enter principal amount (P): ");
+        double principal = scanner.nextDouble();
+
+        // Input time
+        System.out.print("Enter time in years (T): ");
+        double time = scanner.nextDouble();
+
+        // Input rate
+        System.out.print("Enter rate of interest per annum (R): ");
+        double rate = scanner.nextDouble();
+
+        // Calculate simple interest
+        double simpleInterest = (principal * time * rate) / 100;
+
+        // Display the result
+        System.out.println("Simple Interest: $" + simpleInterest);
+
+        scanner.close();
+    }
+}
+
+
+4)  Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
+
+
+
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input first number
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+
+        // Input operator
+        System.out.print("Enter the operator (+, -, *, /): ");
+        char operator = scanner.next().charAt(0);
+
+        // Input second number
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        double result = 0;
+
+        // Perform the calculation based on the operator
+        if (operator == '+') {
+            result = num1 + num2;
+        } else if (operator == '-') {
+            result = num1 - num2;
+        } else if (operator == '*') {
+            result = num1 * num2;
+        } else if (operator == '/') {
+            if (num2 != 0) {
+                result = num1 / num2;
+            } else {
+                System.out.println("Error! Division by zero is not allowed.");
+                System.exit(1); // Terminate the program
+            }
+        } else {
+            System.out.println("Error! Invalid operator.");
+            System.exit(1); // Terminate the program
+        }
+
+        // Display the result
+        System.out.println("Result: " + result);
+
+        scanner.close();
+    }
+}
+
+
+
+5)Take 2 numbers as input and print the largest number.
+
+
+
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input the first number
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+
+        // Input the second number
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        double largest;
+
+        // Determine the largest number
+        if (num1 > num2) {
+            largest = num1;
+        } else {
+            largest = num2;
+        }
+
+        // Print the largest number
+        System.out.println("The largest number is: " + largest);
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+
+
+
