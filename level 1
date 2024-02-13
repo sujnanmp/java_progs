@@ -1,0 +1,37 @@
+1)   print whether a number is even or odd
+
+import java.util.Scanner;
+
+public class EvenOrOdd {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        if(number % 2 == 0) {
+            System.out.println(number + " is even.");
+        } else {
+            System.out.println(number + " is odd.");
+        }
+
+        scanner.close();
+    }
+}
+
+2)  Take name as input and print a greeting message for that particular name.
+
+import java.util.Scanner;
+
+public class Greeting {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        System.out.println("Hello, " + name + "! Welcome to our program.");
+
+        scanner.close();
+    }
+}
